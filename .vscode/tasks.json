@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "sam build",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "WORKSPACE_FOLDER": "${workspaceFolder}"
+        }
+      }
+    }
+  ]
+}

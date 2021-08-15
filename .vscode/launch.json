@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "preLaunchTask": "npm: build",
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "sam-typescript:HelloWorldFunction",
+      "invokeTarget": {
+        "target": "template",
+        "templatePath": "${workspaceFolder}/template.yaml",
+        "logicalId": "HelloWorldFunction"
+      },
+      "lambda": {
+        "payload": {},
+        "environmentVariables": {},
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceFolder}/.aws-sam/build/HelloWorldFunction",
+            "remoteRoot": "/var/task"
+          }
+        ]
+      }
+    }
+  ]
+}
